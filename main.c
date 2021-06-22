@@ -32,6 +32,9 @@ void encontra_subarray(int *vet, int inicio, int fim, int *i, int *j, int *soma)
     int cross_min, cross_max, soma_cross;
 
     if(fim == inicio){
+        *i = inicio;
+        *j = fim;
+        *soma = vet[inicio];
         return;
     }
     else{
@@ -69,7 +72,7 @@ int main()
 
     encontra_subarray(vet, 0, 15, &i, &j, &soma);
 
-    printf("O maior subarranjo continuo do vetor eh:\n\n");
+    printf("o Maior subarranjo continuo do vetor eh:\n\n");
 
     for(int k=i; k<=j; k++){
         printf("%i ", vet[k]);
